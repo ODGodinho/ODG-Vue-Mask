@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODG-mask</title>
+    <link rel="stylesheet" href="./css/demo.css">
+    <script data-ad-client="ca-pub-2199964944255269" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://odgodinho.github.io/ODG-Mask/js/ODGMask.js"></script>
+    <script src="js/ODG-Vue-Mask.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <section class="section-header" id="section-header">
+            <div class="center-vertically">
+                <h1 class="title-element">ODGMask</h1>
+
+                <h4>This plugin implements ODGMask in the vuejs guideline "v-odg-mask" , <br /> the operation is similar to <a href="https://odgodinho.github.io/ODG-Mask/" target="_blank"> ODGMaks </a> ...</h4>;
+
+                <div class="anuncio">
+                    <!-- Cabeçalho ODGMask -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2199964944255269" data-ad-slot="6472806480" data-ad-format="auto" data-full-width-responsive="true"></ins>
+
+                </div>
+
+                <div class="btn-groups mb-4">
+                    <a href="#getStarted" class="btn btn-success">Get Started</a>
+                    <a href="https://github.com/ODGodinho/ODG-Vue-Mask" target="_blank" class="btn btn-secondary btn-github">Veja no GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="getStartedSection" class="container">
+            <h1 id="getStarted" class="title-element fs-2-0">
+                Get Started
+            </h1>
+            <hr>
+            <h2 class="fs-1-5">Installation</h2>
+            <p>Package is installable via npm</p>
+            <pre class="language">npm install @odg/odg-vue-mask --save</pre>
+            <pre class="language">yarn add @odg/odg-vue-mask --save</pre>
+            <p>install via browser</p>
+            <pre class="language">&lt;<span class="html-tag">script</span> src="https://odgodinho.github.io/ODG-Mask/js/ODGMask.js"&gt;&lt;<span class="html-tag">/script</span>&gt;
+&lt;<span class="html-tag">script</span> src="js/ODG-Vue-Mask.js"&gt; &lt;<span class="html-tag">/script</span>&gt;</pre>
+
+            <br><br>
+
+            <h2 class="fs-1-5">Example</h2>
+
+            <!-- CPF -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        <strong class="fs-1-5"> CPF: </strong>
+                        <span class="fs-1-0"> 000.000.000-00 </span>
+                    </p>
+                    <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="tel" <span class="html-attr">placeholder</span>="000.000.000-00" <span class="html-attr">v-odg-mask</span>="'000.000.000-00'" <span class="html-attr">v-model</span>="cpf1" /&gt;</pre>
+                </div>
+                <div class="col-sm-4">
+                    <h5> Teste: </h5>
+                    <input type="tel" placeholder="000.000.000-00" v-odg-mask="'000.000.000-00'" v-model="cpf1">
+                    <pre v-text="cpf1"></pre>
+                </div>
+            </div>
+
+            <!-- CNPJ -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        <strong class="fs-1-5"> CNPJ: </strong>
+                        <span class="fs-1-0"> 00.000.000/0000-00 </span>
+                    </p>
+                    <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="tel" <span class="html-attr">placeholder</span>="00.000.000/0000-00" <span class="html-attr">v-odg-mask</span>="'00.000.000/0000-00'" <span class="html-attr">v-model</span>="cnpj1" /&gt;</pre>
+                </div>
+                <div class="col-sm-4">
+                    <h5> Teste: </h5>
+                    <input type="tel" placeholder="00.000.000/0000-00" v-odg-mask="'00.000.000/0000-00'" v-model="cnpj1">
+                    <pre v-text="cnpj1"></pre>
+                </div>
+            </div>
+
+            <!-- TELEFONE AREA CODE -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        <strong class="fs-1-5"> Phone area Code: </strong>
+                        <span class="fs-1-0"> (00) 0000-0000 </span>
+                    </p>
+                    <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="text" <span class="html-attr">placeholder</span>="(00) 0000-0000" <span class="html-attr">v-odg-mask</span>="'(00) 0000-0000'" <span class="html-attr">v-model</span>="phone" /&gt;</pre>
+                </div>
+                <div class="col-sm-4">
+                    <h5> Teste: </h5>
+                    <input type="text" placeholder="(00) 0000-0000" v-odg-mask="'(00) 0000-0000'" v-model="phone">
+                    <pre v-text="phone"></pre>
+                </div>
+            </div>
+
+
+            <!-- TELEFONE AREA CODE -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        <strong class="fs-1-5"> Multiple Mask: </strong>
+                        <span class="fs-1-0"> Phone (00) 0 0000-0000 and (00) 0000-0000 </span>
+                    </p>
+                    <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="tel" <span class="html-attr">placeholder</span>="Phone" <span class="html-attr">v-odg-mask</span>="mask_multiple_phone"  <span class="html-attr">v-model</span>="phone_sp"  /&gt;
+...
+new Vue({
+    data() {
+        return {
+            mask_multiple_phone: ['(00) 0000-0000', '(00) 0 0000-0000'],
+        }
+    },
+})
+...               
+</pre>
+                </div>
+                <div class="col-sm-4">
+                    <h5> Teste: </h5>
+                    <input type="tel" placeholder="Phone" v-odg-mask="mask_multiple_phone" v-model="phone_sp">
+                    <pre v-text="phone_sp"></pre>
+                </div>
+            </div>
+
+            <!-- CPF CNPJ -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        <strong class="fs-1-5"> CPF and CNPJ </strong>
+                        <span class="fs-1-0"> 000.000.000-00 || 00.000.000/0000-00  </span>
+                    </p>
+                    <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="text" <span class="html-attr">placeholder</span>="CPF/CNPJ" <span class="html-attr">v-odg-mask</span>="[ '000.000.000-00', '00.000.000/0000-00' ]" <span class="html-attr">v-model</span>="cpf_cnpj" /&gt;</pre>
+                </div>
+                <div class="col-sm-4">
+                    <h5> Teste: </h5>
+                    <input type="text" placeholder="CPF/CNPJ" v-odg-mask="mask_cnpjcpf" v-model="cpf_cnpj">
+                    <pre v-text="cpf_cnpj"></pre>
+                </div>
+            </div>
+
+            <h3 class="mt-2 fs-1-0">INFO:</h3>
+
+            <p>
+                //! the '<span class="text-danger">v-odg-mask</span>' directive can be passed an array or string element directly to it. <br>
+                // if you <span class="text-danger">don't use any vue attributes</span> in your input, <a href="https://odgodinho.github.io/ODG-Mask/" target="_blank"> click here </a> for the vanilla demo. 
+            </p>
+
+            <br><br><br>
+
+
+
+            <h2 class="fs-2-0">Save Object Maks element</h2>
+            
+            <p>
+                //? to save the entire "<span class="text-danger">ODGMask</span>" element in vuejs it is necessary to inform an object in v-model and <span class="text-danger">.value</span>
+            </p>
+
+            <!-- CPF/CNPJ OBJECT -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        <strong class="fs-1-5"> CPF and CNPJ </strong>
+                        <span class="fs-1-0"> 000.000.000-00 || 00.000.000/0000-00</span>
+                    </p>
+                    <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="text" <span class="html-attr">placeholder</span>="CPF/CNPJ" <span class="html-attr">v-odg-mask</span>="[ '000.000.000-00', '00.000.000/0000-00' ]"  <span class="html-attr">v-model</span>="saveObjectTest.value" /&gt;
+...
+new Vue({
+    data() {
+        return {
+            saveObjectTest: {
+                value: ''
+            },
+        }
+    },
+})
+...   
+</pre> 
+                    <span>// v-model ends with ".value" to save the object</span>
+                </div>
+                <div class="col-sm-4">
+                    <h5> Teste: </h5>
+                    <input type="text" placeholder="CPF/CNPJ" v-odg-mask="mask_cnpjcpf" v-model="saveObjectTest.value">
+                    <pre v-text="saveObjectTest"></pre>
+                </div>
+            </div>
+
+
+            <h2 class="fs-2-0">On Change Mask</h2>
+
+
+
+            <!-- CPF/CNPJ OBJECT On change -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        <strong class="fs-1-5"> CPF and CNPJ ( onChange ) </strong>
+                        <span class="fs-1-0"> Phone (00) 0 0000-0000 and (00) 0000-0000 </span>
+                    </p>
+                    <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="text" <span class="html-attr">placeholder</span>="CPF/CNPJ ( onChange )" <span class="html-attr">v-odg-mask</span>="[ '000.000.000-00', '00.000.000/0000-00' ]" <span class="html-attr">:value</span>="cpf_cnpj_change.value"  <span class="html-attr">@change</span>="($event) => {cpf_cnpj_change.value = $event.target.value;}" /&gt;</pre> 
+                </div>
+                <div class="col-sm-4">
+                    <h5> Teste: </h5>
+                    <input type="text" placeholder="CPF/CNPJ ( onChange )" v-odg-mask="mask_cnpjcpf" :value="cpf_cnpj_change.value" @change="($event) => {cpf_cnpj_change.value = $event.target.value;}">
+                    <pre v-text="cpf_cnpj_change"></pre>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section id="manualTokens" class="container">
+            <h1 class="title-element fs-2-0">
+                Options attribute ODGMask:
+            </h1>
+            <hr>
+            <pre class="language">&lt;<span class="html-tag">input</span> <span class="html-attr">type</span>="tel" <span class="html-attr">placeholder</span>="CPF" <span class="html-attr">v-odg-mask</span>="'000.000.000-00'" <span class="html-attr">:odg-vue-mask-options</span>="customOptions" <span class="html-attr">v-model</span>="cpf1" /&gt;
+...
+import ODGMask from '@odg/odg-mask';
+new Vue({
+    data() {
+        return {
+            cpf1: '',
+            customOptions: {
+                tokens: {
+                    ...ODGMask.defaultTokens,
+                    "G": {
+                        pattern: /[a-zA-Z0-9]/u,
+                        transform: (el) =&gt; String(el).toLocaleLowerCase(), // transforms the letter before inserting
+                        optional: true, // is optional?
+                        nextElement: true, // should the action be performed on the next element?
+                        noMask: true // this element should not be treated as a token
+                    }
+                }
+            }
+        }
+    },
+})
+...   
+                </pre> 
+
+            <p>for more information read the ODGMask vanilla documentation <a href="https://odgodinho.github.io/ODG-Mask/" target="_blank"> Click here </a></p>
+        </section>
+
+
+        <div>
+            <!-- ODGMask - page end -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2199964944255269" data-ad-slot="9760426750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+
+        <footer>
+            <h6 class="text-white d-inline-block">
+                &copy; ODG - 2020
+            </h6>
+            <div class="icons">
+                <a href="https://github.com/ODGodinho/ODG-mask" target="_blank" class="btn btn-secondary btn-github">GitHub</a>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script>
+
+        new Vue({
+            data() {
+                return {
+                    cpf1: '',
+                    cnpj1: '',
+                    cpf_cnpj: '',
+                    phone: '',
+                    phone_sp: '',
+                    mask_multiple_phone: [ '(00) 0000-0000', '(00) 0 0000-0000' ],
+                    mask_cnpjcpf: [ "000.000.000-00", "00.000.000/0000-00" ],
+                    saveObjectTest: {
+                        value: ''
+                    },
+                    cpf_cnpj_change: {
+                        value: ''
+                    }
+                }
+            },
+        }).$mount('#app');
+
+    </script>
+
+
+</body>
+
+</html>
