@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ODG-Vue-Mask</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="ODG-Vue-Mask.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-odg-mask="casa2" :value="casa" @change="($event)=>{casa = $event.target.value; log(this)}">
+    <br>
+    <br>
+    <input type="text" v-odg-mask="casa3" v-model="casaA" >
+    <br>
+    <br>
+    <input type="text" v-odg-mask="casa3" v-model="casaB.value">
+    <br>
+    <br>
+    <input type="text" v-model="bolinha" >
+    <br>
+    <br>
+    <div v-odg-mask="casa2" :odg-mask-options="'rola'" v-text="bolinha"></div>
+    <br>
+  </div>
+
+  <script>
+    app = new Vue({
+      data() {
+        return {
+          casa: 'bola',
+          casaA: '',
+          casaB: {},
+          casa2: ["000.000.000-00", "00.000.000/0000-00"],
+          casa3: ["(31) 0000-0000", "(31) 9 0000-0000"],
+          bolinha: '32'
+        }
+      },
+      methods: {
+        log(a){
+          console.log(a, this);
+        }
+      },
+    }).$mount('#app')
+  </script>
+</body>
+</html>
