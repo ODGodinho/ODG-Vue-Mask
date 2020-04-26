@@ -13,6 +13,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist')
   },
   optimization: {
-    minimize: false
+    minimize: true
   },
 }
