@@ -26,7 +26,6 @@ export default {
    * @param {import("vue/types/umd").VNode} vNodeNew
    */
   update: function (el, direc, vNodeNew) {
-    console.log(direc, vNodeNew);
     updateMaskDirective(el, direc, vNodeNew);
   },
 };
