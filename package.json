@@ -43,6 +43,10 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
+  "dependencies": {
+    "@odg/odg-mask": "^0.2.2",
+    "vue": "^2.6.11"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog",
@@ -62,9 +66,5 @@
     "helper",
     "mask",
     "vanilla"
-  ],
-  "dependencies": {
-    "@odg/odg-mask": "^0.2.1",
-    "vue": "^2.6.11"
-  }
+  ]
 }
