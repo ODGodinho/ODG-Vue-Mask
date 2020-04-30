@@ -1,4 +1,4 @@
-# ODG-mask
+# ODG-Vue-Mask
 Node plugin para mascaras de texto
 
 # Documentation, Demo & Examples
