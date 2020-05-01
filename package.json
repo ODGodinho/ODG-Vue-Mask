@@ -1,6 +1,6 @@
 {
   "name": "@odg/odg-vue-mask",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Pacote para formatar string e inputs no vuejs",
   "private": false,
   "main": "src/index.js",
@@ -44,7 +44,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@odg/odg-mask": "^0.2.2",
+    "@odg/odg-mask": "*",
     "vue": "^2.6.11"
   },
   "config": {
